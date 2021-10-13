@@ -1,0 +1,6 @@
+const type = {
+    SET_ALL_AIRCRAFT_FLIGHTS: 'SET_ALL_AIRCRAFT_FLIGHTS',
+    SET_FLIGHT_PASSENGERS: 'SET_FLIGHT_PASSENGERS',
+}
+
+export default type;
