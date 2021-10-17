@@ -16,6 +16,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::group([ 'prefix' => 'v1', 'middleware' => 'api'], function() {
 
+    /* User logout from system */
+    Route::get('/user/logout', 'App\Http\Controllers\Api\v1\AuthController@logout');
+
+    // Get auth user
+    Route::get('/token/validate', 'App\Http\Controllers\Api\v1\AuthController@auth');
+
+    /* User logout from system */
+    Route::get('/qrcode', 'App\Http\Controllers\Api\v1\QrcodeController@index');
+
     /* User register */
     Route::post('/user/register', 'App\Http\Controllers\Api\v1\AuthController@register');
 
