@@ -67,16 +67,7 @@ Route::group([ 'prefix' => 'v1', 'middleware' => 'api'], function() {
 
     //Admin actions
     Route::group([ 'prefix' => 'admin', 'middleware' => 'isAdmin' ], function() {
-        /* Get all users details*/
-        Route::get('/users', 'App\Http\Controllers\Api\v1\UserController@getAll');
-        // /* Add a user */
-        Route::post('/user/create', 'App\Http\Controllers\Api\v1\UserController@create');
-        // /* Update a user */
-        Route::put('/user/update', 'App\Http\Controllers\Api\v1\UserController@update');
-        /* Get user detail by id */
-        Route::get('/user/{userId}', 'App\Http\Controllers\Api\v1\UserController@getById');
-        /* delete user by id */
-        Route::delete('/user/delete/{userId}', 'App\Http\Controllers\Api\v1\UserController@delete');
+        
 
         /* Get all passengers details*/
         Route::get('/passengers', 'App\Http\Controllers\Api\v1\PassengerController@getAll');
@@ -93,6 +84,16 @@ Route::group([ 'prefix' => 'v1', 'middleware' => 'api'], function() {
         /* delete passenger by id */
         Route::delete('/passenger/delete/{passengerId}', 'App\Http\Controllers\Api\v1\PassengerController@delete');
         
+        /* Get all users details*/
+        Route::get('/users', 'App\Http\Controllers\Api\v1\UserController@getAll');
+        // /* Add a user */
+        Route::post('/user/create', 'App\Http\Controllers\Api\v1\UserController@create');
+        // /* Update a user */
+        Route::put('/user/update', 'App\Http\Controllers\Api\v1\UserController@update');
+        /* Get user detail by id */
+        Route::get('/user/{userId}', 'App\Http\Controllers\Api\v1\UserController@getById');
+        /* delete user by id */
+        Route::delete('/user/delete/{userId}', 'App\Http\Controllers\Api\v1\UserController@delete');
         /* Get all aircrafts details*/
         Route::get('/aircrafts', 'App\Http\Controllers\Api\v1\FleetController@getAll');
         /* Get all aircraft registrations*/
