@@ -15,11 +15,13 @@ class FleetController extends Controller
     public function __construct() {
         $this->middleware('auth:api', ['except' => []]);
     }
+    
     /**
      * Response all data
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function getAll()
     {
         $aircrafts = Aircraft::all();
