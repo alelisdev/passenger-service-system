@@ -7,7 +7,6 @@ import AuthLayout from '@/contain/checkin/auth/AuthLayout.vue';
 import Layout from '@/contain/checkin/Layout/Layout.vue';
 // GeneralViews
 import NotFound from '@/contain/404/NotFoundPage.vue';
-
 // Pages
 const AdminLogin = () =>
     import ( /* webpackChunkName: "pages" */ '@/contain/admin/auth/Login.vue');
@@ -16,7 +15,6 @@ const AdminRegister = () =>
 
 const Login = () =>
     import ( /* webpackChunkName: "pages" */ '@/contain/checkin/auth/Login.vue');
-
 let adminAuthPages = {
     path: '/admin',
     component: AdminAuthLayout,
@@ -217,6 +215,7 @@ const routes = [{
             },
         ]
     },
+
     adminAuthPages,
     {
         path: '/',
@@ -277,5 +276,4 @@ const routes = [{
     },
     authPages,
 ];
-
 export default routes;
